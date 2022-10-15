@@ -1,0 +1,1081 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>Mano Snippets | SQL</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+    <!-- Favicons -->
+<meta name="theme-color" content="#7952b3">
+
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    <link href="assets/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/snippets/atom-one-dark.min.css">
+  </head>
+  <body>
+    
+<header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
+  <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="#">Mano Snippets</a>
+  <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
+  <div class="navbar-nav">
+    <div class="nav-item text-nowrap"></div>
+  </div>
+</header>
+
+<div class="container-fluid">
+  <div class="row">
+    <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+      <div class="position-sticky pt-3">
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="/">
+              <span data-feather="home"></span>
+              Home
+            </a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="PHP_SQL_PDO.html">
+              <span data-feather="file"></span>
+              PHP - SQL (PDO)
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="PHP_Angular_Security.html">
+              <span data-feather="file"></span>
+              PHP Angular - Security
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link active" href="SQL.html">
+              <span data-feather="file"></span>
+              SQL Commands
+            </a>
+          </li>
+          
+        </ul>
+
+        <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+          <span>Additional Links</span>
+        </h6>
+        <ul class="nav flex-column mb-2">
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://www.freewebtoolkit.com/html-encode" target="_blank">
+              <span data-feather="file-text"></span>
+              HTML Encoder
+            </a>
+          </li>
+
+        </ul>
+      </div>
+    </nav>
+
+    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 pt-3">
+      
+
+      <h2>MySQL Commands</h2>
+      <p>Help with SQL commands to interact with a MySQL database</p>
+
+
+        <h6>MySQL Locations</h6>
+        <ul>
+          <li>Mac /usr/local/mysql/bin</li>
+          <li>Windows /Program Files/MySQL/MySQL version/bin</li>
+          <li>Xampp /xampp/mysql/bin</li>
+        </ul>
+        
+        <div class="col-12 pt-1 pb-5">
+
+
+
+
+
+
+          <!-- ROW Start -->
+          <div class="row pt-3">
+
+            <div class="col-lg-6">
+              <div class="card shadow">
+                <div class="card-header">
+                  <h4 style="color:rgb(230, 152, 8);">SQL</h4>
+                  <small class="text-muted">
+                    <h6>Add mysql to your PATH</h6>
+                  </small>
+                </div>
+                <div class="card-body py-0">
+                    
+                  <pre class="m-0">
+                    <code style="border-radius: 0.375rem;">
+# Current Session
+
+export PATH=${PATH}:/usr/local/mysql/bin
+
+# Permanantly
+
+echo 'export PATH="/usr/local/mysql/bin:$PATH"' >> ~/.bash_profile
+                    </code>
+                  </pre>
+
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-lg-6">
+              <div class="card shadow">
+                <div class="card-header">
+                  <h4 style="color:rgb(230, 152, 8);">SQL</h4>
+                  <small class="text-muted">
+                    <h6>Login</h6>
+                  </small>
+                </div>
+                <div class="card-body py-0">
+                    
+                  <pre class="m-0">
+                    <code style="border-radius: 0.375rem;">
+mysql -u root -p
+                    </code>
+                  </pre>
+
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <!-- ROW End -->
+
+
+          <!-- ROW Start -->
+          <div class="row pt-3">
+
+            <div class="col-lg-6">
+              <div class="card shadow">
+                <div class="card-header">
+                  <h4 style="color:rgb(230, 152, 8);">SQL</h4>
+                  <small class="text-muted">
+                    <h6>Show Users</h6>
+                  </small>
+                </div>
+                <div class="card-body py-0">
+                    
+                  <pre class="m-0">
+                    <code style="border-radius: 0.375rem;">
+SELECT User, Host FROM mysql.user;
+                    </code>
+                  </pre>
+
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-lg-6">
+              <div class="card shadow">
+                <div class="card-header">
+                  <h4 style="color:rgb(230, 152, 8);">SQL</h4>
+                  <small class="text-muted">
+                    <h6>Grant All Priveleges On All Databases</h6>
+                  </small>
+                </div>
+                <div class="card-body py-0">
+                    
+                  <pre class="m-0">
+                    <code style="border-radius: 0.375rem;">
+GRANT ALL PRIVILEGES ON * . * TO 'someuser'@'localhost';
+
+FLUSH PRIVILEGES;
+                    </code>
+                  </pre>
+
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <!-- ROW End -->
+
+          <!-- ROW Start -->
+          <div class="row pt-3">
+
+            <div class="col-lg-6">
+              <div class="card shadow">
+                <div class="card-header">
+                  <h4 style="color:rgb(230, 152, 8);">SQL</h4>
+                  <small class="text-muted">
+                    <h6>Show Grants</h6>
+                  </small>
+                </div>
+                <div class="card-body py-0">
+                    
+                  <pre class="m-0">
+                    <code style="border-radius: 0.375rem;">
+SHOW GRANTS FOR 'someuser'@'localhost';
+                    </code>
+                  </pre>
+
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-lg-6">
+              <div class="card shadow">
+                <div class="card-header">
+                  <h4 style="color:rgb(230, 152, 8);">SQL</h4>
+                  <small class="text-muted">
+                    <h6>Delete User</h6>
+                  </small>
+                </div>
+                <div class="card-body py-0">
+                    
+                  <pre class="m-0">
+                    <code style="border-radius: 0.375rem;">
+DROP USER 'someuser'@'localhost';
+                    </code>
+                  </pre>
+
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <!-- ROW End -->
+
+
+          <!-- ROW Start -->
+          <div class="row pt-3">
+
+            <div class="col-lg-6">
+              <div class="card shadow">
+                <div class="card-header">
+                  <h4 style="color:rgb(230, 152, 8);">SQL</h4>
+                  <small class="text-muted">
+                    <h6>Exit</h6>
+                  </small>
+                </div>
+                <div class="card-body py-0">
+                    
+                  <pre class="m-0">
+                    <code style="border-radius: 0.375rem;">
+exit;
+                    </code>
+                  </pre>
+
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-lg-6">
+              <div class="card shadow">
+                <div class="card-header">
+                  <h4 style="color:rgb(230, 152, 8);">SQL</h4>
+                  <small class="text-muted">
+                    <h6>Show Databases</h6>
+                  </small>
+                </div>
+                <div class="card-body py-0">
+                    
+                  <pre class="m-0">
+                    <code style="border-radius: 0.375rem;">
+SHOW DATABASES
+                    </code>
+                  </pre>
+
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <!-- ROW End -->
+
+          <!-- ROW Start -->
+          <div class="row pt-3">
+
+            <div class="col-lg-6">
+              <div class="card shadow">
+                <div class="card-header">
+                  <h4 style="color:rgb(230, 152, 8);">SQL</h4>
+                  <small class="text-muted">
+                    <h6>Create Database</h6>
+                  </small>
+                </div>
+                <div class="card-body py-0">
+                    
+                  <pre class="m-0">
+                    <code style="border-radius: 0.375rem;">
+CREATE DATABASE acme;
+                    </code>
+                  </pre>
+
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-lg-6">
+              <div class="card shadow">
+                <div class="card-header">
+                  <h4 style="color:rgb(230, 152, 8);">SQL</h4>
+                  <small class="text-muted">
+                    <h6>Delete Database</h6>
+                  </small>
+                </div>
+                <div class="card-body py-0">
+                    
+                  <pre class="m-0">
+                    <code style="border-radius: 0.375rem;">
+DROP DATABASE acme;
+                    </code>
+                  </pre>
+
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <!-- ROW End -->
+
+
+          <!-- ROW Start -->
+          <div class="row pt-3">
+
+            <div class="col-lg-6">
+              <div class="card shadow">
+                <div class="card-header">
+                  <h4 style="color:rgb(230, 152, 8);">SQL</h4>
+                  <small class="text-muted">
+                    <h6>Select Database</h6>
+                  </small>
+                </div>
+                <div class="card-body py-0">
+                    
+                  <pre class="m-0">
+                    <code style="border-radius: 0.375rem;">
+USE acme;
+                    </code>
+                  </pre>
+
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-lg-6">
+              <div class="card shadow">
+                <div class="card-header">
+                  <h4 style="color:rgb(230, 152, 8);">SQL</h4>
+                  <small class="text-muted">
+                    <h6>Create Table</h6>
+                  </small>
+                </div>
+                <div class="card-body py-0">
+                    
+                  <pre class="m-0">
+                    <code style="border-radius: 0.375rem;">
+CREATE TABLE users(
+  id INT AUTO_INCREMENT,
+  first_name VARCHAR(100),
+  last_name VARCHAR(100),
+  email VARCHAR(50),
+  password VARCHAR(20),
+  location VARCHAR(100),
+  dept VARCHAR(100),
+  is_admin TINYINT(1),
+  register_date DATETIME,
+  PRIMARY KEY(id)
+);
+                    </code>
+                  </pre>
+
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <!-- ROW End -->
+
+
+          <!-- ROW Start -->
+          <div class="row pt-3">
+
+            <div class="col-lg-6">
+              <div class="card shadow">
+                <div class="card-header">
+                  <h4 style="color:rgb(230, 152, 8);">SQL</h4>
+                  <small class="text-muted">
+                    <h6>Delete / Drop Table</h6>
+                  </small>
+                </div>
+                <div class="card-body py-0">
+                    
+                  <pre class="m-0">
+                    <code style="border-radius: 0.375rem;">
+DROP TABLE tablename;
+                    </code>
+                  </pre>
+
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-lg-6">
+              <div class="card shadow">
+                <div class="card-header">
+                  <h4 style="color:rgb(230, 152, 8);">SQL</h4>
+                  <small class="text-muted">
+                    <h6>Show Tables</h6>
+                  </small>
+                </div>
+                <div class="card-body py-0">
+                    
+                  <pre class="m-0">
+                    <code style="border-radius: 0.375rem;">
+SHOW TABLES;
+                    </code>
+                  </pre>
+
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <!-- ROW End -->
+
+
+          <!-- ROW Start -->
+          <div class="row pt-3">
+
+            <div class="col-lg-6">
+              <div class="card shadow">
+                <div class="card-header">
+                  <h4 style="color:rgb(230, 152, 8);">SQL</h4>
+                  <small class="text-muted">
+                    <h6>Insert Row / Record</h6>
+                  </small>
+                </div>
+                <div class="card-body py-0">
+                    
+                  <pre class="m-0">
+                    <code style="border-radius: 0.375rem;">
+INSERT INTO users (first_name, last_name, email, password, location, dept, is_admin, register_date) 
+
+VALUES 
+
+('Brad', 'Traversy', 'brad@gmail.com', '123456','Massachusetts', 'development', 1, now());
+                    </code>
+                  </pre>
+
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-lg-6">
+              <div class="card shadow">
+                <div class="card-header">
+                  <h4 style="color:rgb(230, 152, 8);">SQL</h4>
+                  <small class="text-muted">
+                    <h6>Insert Multiple Rows</h6>
+                  </small>
+                </div>
+                <div class="card-body py-0">
+                    
+                  <pre class="m-0">
+                    <code style="border-radius: 0.375rem;">
+INSERT INTO users (first_name, last_name, email, password, location, dept,  is_admin, register_date) 
+
+VALUES 
+
+('Fred', 'Smith', 'fred@gmail.com', '123456', 'New York', 'design', 0, now()), 
+('Sara', 'Watson', 'sara@gmail.com', '123456', 'New York', 'design', 0, now()),
+('Will', 'Jackson', 'will@yahoo.com', '123456', 'Rhode Island', 'development', 1, now()),
+('Paula', 'Johnson', 'paula@yahoo.com', '123456', 'Massachusetts', 'sales', 0, now()),
+('Tom', 'Spears', 'tom@yahoo.com', '123456', 'Massachusetts', 'sales', 0, now());
+                    </code>
+                  </pre>
+
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <!-- ROW End -->
+
+
+          <!-- ROW Start -->
+          <div class="row pt-3">
+
+            <div class="col-lg-6">
+              <div class="card shadow">
+                <div class="card-header">
+                  <h4 style="color:rgb(230, 152, 8);">SQL</h4>
+                  <small class="text-muted">
+                    <h6>Select</h6>
+                  </small>
+                </div>
+                <div class="card-body py-0">
+                    
+                  <pre class="m-0">
+                    <code style="border-radius: 0.375rem;">
+SELECT * FROM users;
+
+SELECT first_name, last_name FROM users;
+                    </code>
+                  </pre>
+
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-lg-6">
+              <div class="card shadow">
+                <div class="card-header">
+                  <h4 style="color:rgb(230, 152, 8);">SQL</h4>
+                  <small class="text-muted">
+                    <h6>Where Clause</h6>
+                  </small>
+                </div>
+                <div class="card-body py-0">
+                    
+                  <pre class="m-0">
+                    <code style="border-radius: 0.375rem;">
+SELECT * FROM users WHERE location='Massachusetts';
+
+SELECT * FROM users WHERE location='Massachusetts' AND dept='sales';
+
+SELECT * FROM users WHERE is_admin = 1;
+
+SELECT * FROM users WHERE is_admin > 0;
+                    </code>
+                  </pre>
+
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <!-- ROW End -->
+
+
+          <!-- ROW Start -->
+          <div class="row pt-3">
+
+            <div class="col-lg-6">
+              <div class="card shadow">
+                <div class="card-header">
+                  <h4 style="color:rgb(230, 152, 8);">SQL</h4>
+                  <small class="text-muted">
+                    <h6>Delete Row</h6>
+                  </small>
+                </div>
+                <div class="card-body py-0">
+                    
+                  <pre class="m-0">
+                    <code style="border-radius: 0.375rem;">
+DELETE FROM users WHERE id = 6;
+                    </code>
+                  </pre>
+
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-lg-6">
+              <div class="card shadow">
+                <div class="card-header">
+                  <h4 style="color:rgb(230, 152, 8);">SQL</h4>
+                  <small class="text-muted">
+                    <h6>Update Row</h6>
+                  </small>
+                </div>
+                <div class="card-body py-0">
+                    
+                  <pre class="m-0">
+                    <code style="border-radius: 0.375rem;">
+UPDATE users SET email = 'freddy@gmail.com' WHERE id = 2;
+                    </code>
+                  </pre>
+
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <!-- ROW End -->
+
+
+          <!-- ROW Start -->
+          <div class="row pt-3">
+
+            <div class="col-lg-6">
+              <div class="card shadow">
+                <div class="card-header">
+                  <h4 style="color:rgb(230, 152, 8);">SQL</h4>
+                  <small class="text-muted">
+                    <h6>Add New Column</h6>
+                  </small>
+                </div>
+                <div class="card-body py-0">
+                    
+                  <pre class="m-0">
+                    <code style="border-radius: 0.375rem;">
+ALTER TABLE users ADD age VARCHAR(3);
+                    </code>
+                  </pre>
+
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-lg-6">
+              <div class="card shadow">
+                <div class="card-header">
+                  <h4 style="color:rgb(230, 152, 8);">SQL</h4>
+                  <small class="text-muted">
+                    <h6>Modify Column</h6>
+                  </small>
+                </div>
+                <div class="card-body py-0">
+                    
+                  <pre class="m-0">
+                    <code style="border-radius: 0.375rem;">
+ALTER TABLE users MODIFY COLUMN age INT(3);
+                    </code>
+                  </pre>
+
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <!-- ROW End -->
+
+
+          <!-- ROW Start -->
+          <div class="row pt-3">
+
+            <div class="col-lg-6">
+              <div class="card shadow">
+                <div class="card-header">
+                  <h4 style="color:rgb(230, 152, 8);">SQL</h4>
+                  <small class="text-muted">
+                    <h6>Order By (Sort)</h6>
+                  </small>
+                </div>
+                <div class="card-body py-0">
+                    
+                  <pre class="m-0">
+                    <code style="border-radius: 0.375rem;">
+SELECT * FROM users ORDER BY last_name ASC;
+
+SELECT * FROM users ORDER BY last_name DESC;
+                    </code>
+                  </pre>
+
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-lg-6">
+              <div class="card shadow">
+                <div class="card-header">
+                  <h4 style="color:rgb(230, 152, 8);">SQL</h4>
+                  <small class="text-muted">
+                    <h6>Concatenate Columns</h6>
+                  </small>
+                </div>
+                <div class="card-body py-0">
+                    
+                  <pre class="m-0">
+                    <code style="border-radius: 0.375rem;">
+SELECT CONCAT(first_name, ' ', last_name) AS 'Name', dept FROM users;
+                    </code>
+                  </pre>
+
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <!-- ROW End -->
+
+
+          <!-- ROW Start -->
+          <div class="row pt-3">
+
+            <div class="col-lg-6">
+              <div class="card shadow">
+                <div class="card-header">
+                  <h4 style="color:rgb(230, 152, 8);">SQL</h4>
+                  <small class="text-muted">
+                    <h6>Select Distinct Rows</h6>
+                  </small>
+                </div>
+                <div class="card-body py-0">
+                    
+                  <pre class="m-0">
+                    <code style="border-radius: 0.375rem;">
+SELECT DISTINCT location FROM users;
+                    </code>
+                  </pre>
+
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-lg-6">
+              <div class="card shadow">
+                <div class="card-header">
+                  <h4 style="color:rgb(230, 152, 8);">SQL</h4>
+                  <small class="text-muted">
+                    <h6>Between (Select Range)</h6>
+                  </small>
+                </div>
+                <div class="card-body py-0">
+                    
+                  <pre class="m-0">
+                    <code style="border-radius: 0.375rem;">
+SELECT * FROM users WHERE age BETWEEN 20 AND 25;
+                    </code>
+                  </pre>
+
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <!-- ROW End -->
+
+
+          <!-- ROW Start -->
+          <div class="row pt-3">
+
+            <div class="col-lg-6">
+              <div class="card shadow">
+                <div class="card-header">
+                  <h4 style="color:rgb(230, 152, 8);">SQL</h4>
+                  <small class="text-muted">
+                    <h6>Like (Searching)</h6>
+                  </small>
+                </div>
+                <div class="card-body py-0">
+                    
+                  <pre class="m-0">
+                    <code style="border-radius: 0.375rem;">
+SELECT * FROM users WHERE dept LIKE 'd%';
+
+SELECT * FROM users WHERE dept LIKE 'dev%';
+
+SELECT * FROM users WHERE dept LIKE '%t';
+
+SELECT * FROM users WHERE dept LIKE '%e%';
+                    </code>
+                  </pre>
+
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-lg-6">
+              <div class="card shadow">
+                <div class="card-header">
+                  <h4 style="color:rgb(230, 152, 8);">SQL</h4>
+                  <small class="text-muted">
+                    <h6>Not Like</h6>
+                  </small>
+                </div>
+                <div class="card-body py-0">
+                    
+                  <pre class="m-0">
+                    <code style="border-radius: 0.375rem;">
+SELECT * FROM users WHERE dept NOT LIKE 'd%';
+                    </code>
+                  </pre>
+
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <!-- ROW End -->
+
+
+          <!-- ROW Start -->
+        <div class="row pt-3">
+
+          <div class="col-lg-6">
+            <div class="card shadow">
+              <div class="card-header">
+                <h4 style="color:rgb(230, 152, 8);">SQL</h4>
+                <small class="text-muted">
+                  <h6>IN</h6>
+                </small>
+              </div>
+              <div class="card-body py-0">
+                  
+                <pre class="m-0">
+                  <code style="border-radius: 0.375rem;">
+SELECT * FROM users WHERE dept IN ('design', 'sales');
+                  </code>
+                </pre>
+
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-lg-6">
+            <div class="card shadow">
+              <div class="card-header">
+                <h4 style="color:rgb(230, 152, 8);">SQL</h4>
+                <small class="text-muted">
+                  <h6>Create & Remove Index</h6>
+                </small>
+              </div>
+              <div class="card-body py-0">
+                  
+                <pre class="m-0">
+                  <code style="border-radius: 0.375rem;">
+CREATE INDEX LIndex On users(location);
+
+DROP INDEX LIndex ON users;
+                  </code>
+                </pre>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <!-- ROW End -->
+
+
+        <!-- ROW Start -->
+        <div class="row pt-3">
+
+          <div class="col-lg-6">
+            <div class="card shadow">
+              <div class="card-header">
+                <h4 style="color:rgb(230, 152, 8);">SQL</h4>
+                <small class="text-muted">
+                  <h6>New Table With Foreign Key (Posts)</h6>
+                </small>
+              </div>
+              <div class="card-body py-0">
+                  
+                <pre class="m-0">
+                  <code style="border-radius: 0.375rem;">
+CREATE TABLE posts(
+  id INT AUTO_INCREMENT,
+  user_id INT,
+  title VARCHAR(100),
+  body TEXT,
+  publish_date DATETIME DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY(id),
+  FOREIGN KEY (user_id) REFERENCES users(id)
+);
+                  </code>
+                </pre>
+
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-lg-6">
+            <div class="card shadow">
+              <div class="card-header">
+                <h4 style="color:rgb(230, 152, 8);">SQL</h4>
+                <small class="text-muted">
+                  <h6>Add Data to Posts Table</h6>
+                </small>
+              </div>
+              <div class="card-body py-0">
+                  
+                <pre class="m-0">
+                  <code style="border-radius: 0.375rem;">
+INSERT INTO posts(user_id, title, body) 
+
+VALUES 
+
+(1, 'Post One', 'This is post one'),
+(3, 'Post Two', 'This is post two'),
+(1, 'Post Three', 'This is post three'),
+(2, 'Post Four', 'This is post four'),
+(5, 'Post Five', 'This is post five'),
+(4, 'Post Six', 'This is post six'),
+(2, 'Post Seven', 'This is post seven'),
+(1, 'Post Eight', 'This is post eight'),
+(3, 'Post Nine', 'This is post none'),
+(4, 'Post Ten', 'This is post ten');
+                  </code>
+                </pre>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <!-- ROW End -->
+
+
+        <!-- ROW Start -->
+        <div class="row pt-3">
+
+          <div class="col-lg-6">
+            <div class="card shadow">
+              <div class="card-header">
+                <h4 style="color:rgb(230, 152, 8);">SQL</h4>
+                <small class="text-muted">
+                  <h6>Left Join</h6>
+                </small>
+              </div>
+              <div class="card-body py-0">
+                  
+                <pre class="m-0">
+                  <code style="border-radius: 0.375rem;">
+SELECT
+comments.body,
+posts.title
+FROM comments
+LEFT JOIN posts ON posts.id = comments.post_id
+ORDER BY posts.title;
+                  </code>
+                </pre>
+
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-lg-6">
+            <div class="card shadow">
+              <div class="card-header">
+                <h4 style="color:rgb(230, 152, 8);">SQL</h4>
+                <small class="text-muted">
+                  <h6>Join Multiple Tables</h6>
+                </small>
+              </div>
+              <div class="card-body py-0">
+                  
+                <pre class="m-0">
+                  <code style="border-radius: 0.375rem;">
+SELECT
+comments.body,
+posts.title,
+users.first_name,
+users.last_name
+FROM comments
+INNER JOIN posts on posts.id = comments.post_id
+INNER JOIN users on users.id = comments.user_id
+ORDER BY posts.title;
+                  </code>
+                </pre>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <!-- ROW End -->
+
+
+        <!-- ROW Start -->
+        <div class="row pt-3">
+
+          <div class="col-lg-6">
+            <div class="card shadow">
+              <div class="card-header">
+                <h4 style="color:rgb(230, 152, 8);">SQL</h4>
+                <small class="text-muted">
+                  <h6>Aggregate Functions</h6>
+                </small>
+              </div>
+              <div class="card-body py-0">
+                  
+                <pre class="m-0">
+                  <code style="border-radius: 0.375rem;">
+SELECT COUNT(id) FROM users;
+SELECT MAX(age) FROM users;
+SELECT MIN(age) FROM users;
+SELECT SUM(age) FROM users;
+SELECT UCASE(first_name), LCASE(last_name) FROM users;
+                  </code>
+                </pre>
+
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-lg-6">
+            <div class="card shadow">
+              <div class="card-header">
+                <h4 style="color:rgb(230, 152, 8);">SQL</h4>
+                <small class="text-muted">
+                  <h6>Group By</h6>
+                </small>
+              </div>
+              <div class="card-body py-0">
+                  
+                <pre class="m-0">
+                  <code style="border-radius: 0.375rem;">
+SELECT age, COUNT(age) FROM users GROUP BY age;
+
+SELECT age, COUNT(age) FROM users WHERE age > 20 GROUP BY age;
+
+SELECT age, COUNT(age) FROM users GROUP BY age HAVING count(age) >=2;
+                  </code>
+                </pre>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <!-- ROW End -->
+
+
+
+
+
+
+
+
+
+
+        </div>
+
+
+
+    </main>
+  </div>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+<script src="assets/script.js"></script>
+<script src="assets/snippets/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+
+  </body>
+</html>
