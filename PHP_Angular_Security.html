@@ -387,24 +387,52 @@ if(check_logged_in()){
           </div>
           
           <div class="col-lg-6">
-            <!-- <div class="card shadow">
+            <div class="card shadow">
               <div class="card-header">
-                <h4 style="color:rgb(44 144 229);">PHP</h4>
+                <h4 style="color:rgb(152, 0, 86);">Angular</h4>
                 <small class="text-muted">
-                  <h6>lll</h6>
-                  lll
+                  <h6>Angular HTTP CSRF request</h6>
+                  This is the basic HTTP request of Angular, where the first HTTP requests is checking "../includes/CSRP.php" file to confirm XSRF token and receive CSRF generated token.<br>
+If this request is successful, the next HTTP request will be made to the actual POST request. This request, thesame as the previouse one, will send the XSRF token in the header and received CRSF token in the body as "request_type".<br>
+Next, all the data will be checked in the PHP file.
                 </small>
               </div>
               <div class="card-body py-0">
                   
                 <pre class="m-0">
                   <code style="border-radius: 0.375rem;">
-                  
+$scope.get_Normal_Data = function(){
+
+  $http({
+    method: 'post',
+    url: '../includes/CSRF.php'
+  }).then(function successCallback(response) {
+    var tokenas_CSRF = response.data;
+
+    $http({
+      method: 'post',
+      url: 'includes/normal_call.php',
+      data: {request_type:tokenas_CSRF},
+    }).then(function successCallback(response) {
+        
+      if(response.data.Status === 0){
+        console.log("All OK");
+        console.log(response.data);
+      }else{
+        console.log("Error");
+        console.log(response.data);
+      }
+
+    });
+
+  });
+
+}
                   </code>
                 </pre>
 
               </div>
-            </div> -->
+            </div>
           </div>
       
         </div>
