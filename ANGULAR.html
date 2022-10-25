@@ -417,16 +417,12 @@ $scope.calculate_Const_Items = function(API_List, SQL_List){
                       <small class="text-muted">
                         <h6>List Sorting and pagination</h6>
                       </small>
-                      Required Pagination template from <a href="assets/mano-required/dirPagination.tpl.html">HERE</a>
+                      Required Pagination template
                     </div>
                     <div class="card-body py-0">
                         
                         <pre class="m-0">
                             <code style="border-radius: 0.375rem;">
-
-// ******************************************
-// ***************  Sort By EFF Products
-
 $scope.currentPageRecords = 1;
 $scope.pageSizeRecords = 25;
 
@@ -446,9 +442,6 @@ $scope.sortConsProducts = {
     sortConsProducts.descending = false;
   }
   };
-  
-// ***************  Sort By
-// ******************************************
                             </code>
                           </pre>
 
@@ -547,12 +540,75 @@ $scope.sortConsProducts = {
 
 
 
+          <!-- ROW Start -->
+          <div class="row pt-3">
 
+            <div class="col-lg-6">
+                <div class="card shadow">
+                    <div class="card-header">
+                      <h4 style="color:rgb(0, 152, 33);">HTML</h4>
+                      <small class="text-muted">
+                        <h6>Pagination template (must be attached as separate file)</h6>
+                      </small>
+                    </div>
+                    <div class="card-body py-0">
+                        
+                        <pre class="m-0">
+                            <code style="border-radius: 0.375rem;">
+&lt;ul class=&quot;pagination&quot; ng-if=&quot;1 &lt; pages.length&quot;&gt;
+&lt;li class=&quot;page-item&quot; ng-if=&quot;boundaryLinks&quot; ng-class=&quot;{ disabled : pagination.current == 1 }&quot;&gt;
+  &lt;a class=&quot;page-link&quot; href=&quot;#&quot; aria-label=&quot;Previous&quot; ng-click=&quot;setCurrent(1)&quot;&gt;
+    &lt;span aria-hidden=&quot;true&quot;&gt;&amp;laquo;&lt;/span&gt;
+  &lt;/a&gt;
+&lt;/li&gt;
+&lt;li class=&quot;page-item&quot; ng-if=&quot;directionLinks&quot; ng-class=&quot;{ disabled : pagination.current == 1 }&quot;&gt;
+    &lt;a class=&quot;page-link&quot; href=&quot;#&quot; aria-label=&quot;Previous&quot; ng-click=&quot;setCurrent(pagination.current - 1)&quot;&gt;
+      &lt;span aria-hidden=&quot;true&quot;&gt;&lsaquo;&lt;/span&gt;
+    &lt;/a&gt;
+  &lt;/li&gt;
+&lt;li class=&quot;page-item&quot; ng-repeat=&quot;pageNumber in pages track by $index&quot; ng-class=&quot;{ active : pagination.current == pageNumber, disabled : pageNumber == '...' }&quot;&gt;
+    &lt;a class=&quot;page-link&quot; href=&quot;#&quot; ng-click=&quot;setCurrent(pageNumber)&quot;&gt;{{ pageNumber }}&lt;/a&gt;
+&lt;/li&gt;
+&lt;li class=&quot;page-item&quot; ng-if=&quot;directionLinks&quot; ng-class=&quot;{ disabled : pagination.current == pagination.last }&quot;&gt;
+    &lt;a class=&quot;page-link&quot; href=&quot;#&quot; aria-label=&quot;Next&quot; ng-click=&quot;setCurrent(pagination.current + 1)&quot;&gt;
+      &lt;span aria-hidden=&quot;true&quot;&gt;&rsaquo;&lt;/span&gt;
+    &lt;/a&gt;
+&lt;/li&gt;
+&lt;li class=&quot;page-item&quot; ng-if=&quot;boundaryLinks&quot;  ng-class=&quot;{ disabled : pagination.current == pagination.last }&quot;&gt;
+  &lt;a class=&quot;page-link&quot; href=&quot;#&quot; aria-label=&quot;Next&quot; ng-click=&quot;setCurrent(pagination.last)&quot;&gt;
+    &lt;span aria-hidden=&quot;true&quot;&gt;&amp;raquo;&lt;/span&gt;
+  &lt;/a&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+                            </code>
+                          </pre>
 
+                    </div>
+                  </div>
+            </div>
+            
+            <div class="col-lg-6">
+              <div class="card shadow">
+                  <div class="card-header">
+                    <h4 style="color:rgb(152, 0, 86);">Angular</h4>
+                    <small class="text-muted">
+                      <h6>OOO</h6>
+                    </small>
+                  </div>
+                  <div class="card-body py-0">
+                      
+                      <pre class="m-0">
+                          <code style="border-radius: 0.375rem;">
+OOO
+                          </code>
+                        </pre>
 
-
-
-
+                  </div>
+                </div>
+          </div>
+        
+        </div>
+        <!-- ROW End -->
 
 
 
