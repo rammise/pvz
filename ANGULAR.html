@@ -334,6 +334,75 @@ $window.location.href = '//google.com/page';
                     <div class="card-header">
                       <h4 style="color:rgb(152, 0, 86);">Angular</h4>
                       <small class="text-muted">
+                        <h6>Remove provided Objects</h6>
+                        Remove provided Objects properies from the objects array
+                      </small>
+                    </div>
+                    <div class="card-body py-0">
+                        
+                        <pre class="m-0">
+                            <code style="border-radius: 0.375rem;">
+$scope.remove_Provided_Objects_Properties = function(){
+
+  var normal_Array = $scope.pOrder_MON;
+  var send_List_To_API = normal_Array.map(({Description, SupplierName, Code, Currency, CurrencyRate, NetBase, NetAmountBase, NetAmountSupCur, ...normal_Array}) => normal_Array)
+
+}
+                            </code>
+                          </pre>
+
+                    </div>
+                  </div>
+            </div>
+            
+            <div class="col-lg-6">
+              <div class="card shadow">
+                  <div class="card-header">
+                    <h4 style="color:rgb(152, 0, 86);">Angular</h4>
+                    <small class="text-muted">
+                      <h6>Group multiple arrays</h6>
+                    </small>
+                    Group multiple arrays in to one when matching ID.
+                  </div>
+                  <div class="card-body py-0">
+                      
+                      <pre class="m-0">
+                          <code style="border-radius: 0.375rem;">
+$scope.calculate_Const_Items = function(API_List, SQL_List){
+
+  console.log("API_List");
+  console.log(API_List);
+
+  console.log("SQL_List");
+  console.log(SQL_List);
+
+  const resultArr = API_List.map(v => ({ ...v, ...SQL_List.find(sp => sp.ItemProductID == v.Product.ID) }));
+
+  $scope.fx_Cost_Items_List(resultArr);
+
+}
+                          </code>
+                        </pre>
+
+                  </div>
+                </div>
+          </div>
+        
+        </div>
+        <!-- ROW End -->
+
+
+
+
+
+          <!-- ROW Start -->
+          <div class="row pt-3">
+
+            <div class="col-lg-6">
+                <div class="card shadow">
+                    <div class="card-header">
+                      <h4 style="color:rgb(152, 0, 86);">Angular</h4>
+                      <small class="text-muted">
                         <h6>OOO</h6>
                       </small>
                     </div>
