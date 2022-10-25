@@ -148,6 +148,59 @@
 
 
 
+          <!-- ROW Start -->
+          <div class="row pt-3">
+
+            <div class="col-lg-6">
+                <div class="card shadow">
+                    <div class="card-header">
+                      <h4 style="color:rgb(152, 0, 86);">Angular</h4>
+                      <small class="text-muted">
+                        <h6>Start Angular app</h6>
+                      </small>
+                    </div>
+                    <div class="card-body py-0">
+                        
+                        <pre class="m-0">
+                            <code style="border-radius: 0.375rem;">
+var applicationIs = angular.module('rep_analyzeApp', ['ngAnimate'])
+applicationIs.controller('rep_analyzeController', ['$scope', '$http', '$window', '$location', '$timeout', function ($scope, $http, $window, $location, $timeout) {
+
+}]);
+                            </code>
+                          </pre>
+
+                    </div>
+                  </div>
+            </div>
+            
+            <div class="col-lg-6">
+              <div class="card shadow">
+                  <div class="card-header">
+                    <h4 style="color:rgb(152, 0, 86);">Angular</h4>
+                    <small class="text-muted">
+                      <h6>Timeout</h6>
+                    </small>
+                  </div>
+                  <div class="card-body py-0">
+                      
+                      <pre class="m-0">
+                          <code style="border-radius: 0.375rem;">
+$timeout(function(){
+  $scope.run_Function();
+}, 2000);
+                          </code>
+                        </pre>
+
+                  </div>
+                </div>
+          </div>
+        
+        </div>
+        <!-- ROW End -->
+
+
+
 
 
 
@@ -159,14 +212,22 @@
                       <div class="card-header">
                         <h4 style="color:rgb(152, 0, 86);">Angular</h4>
                         <small class="text-muted">
-                          <h6>OOO</h6>
+                          <h6>HTTP GET Function</h6>
                         </small>
                       </div>
                       <div class="card-body py-0">
                           
                           <pre class="m-0">
                               <code style="border-radius: 0.375rem;">
-OOO
+$scope.getInvoices_JSON = function() {
+
+  $http({
+    method: 'get',
+    url: 'files/JSON/Invoices_BeBeBe.JSON'
+    }).then(function successCallback(response) {
+      console.log(response.data);
+    }); 
+};
                               </code>
                             </pre>
 
@@ -179,14 +240,26 @@ OOO
                     <div class="card-header">
                       <h4 style="color:rgb(152, 0, 86);">Angular</h4>
                       <small class="text-muted">
-                        <h6>OOO</h6>
+                        <h6>HTTP GET using POST</h6>
                       </small>
                     </div>
                     <div class="card-body py-0">
                         
                         <pre class="m-0">
                             <code style="border-radius: 0.375rem;">
-OOO
+$scope.getInvoices_List = function(date_from, date_to) {
+
+  $http({
+    method: 'post',
+    url: 'php_functions/GET_Invoices.php',
+    data: { request_type:0421001,
+            Date_From:date_from,
+            Date_To:date_to
+          },
+    }).then(function successCallback(response) {
+      console.log($response.data);
+    }); 
+};
                             </code>
                           </pre>
 
@@ -196,6 +269,59 @@ OOO
           
           </div>
           <!-- ROW End -->
+
+
+
+
+          <!-- ROW Start -->
+          <div class="row pt-3">
+
+            <div class="col-lg-6">
+                <div class="card shadow">
+                    <div class="card-header">
+                      <h4 style="color:rgb(152, 0, 86);">Angular</h4>
+                      <small class="text-muted">
+                        <h6>GET Propery from URL</h6>
+                      </small>
+                    </div>
+                    <div class="card-body py-0">
+                        
+                        <pre class="m-0">
+                            <code style="border-radius: 0.375rem;">
+$scope.$watch(function () {
+  return location.hash
+  }, function () {
+    console.log($location.hash());
+});
+                            </code>
+                          </pre>
+
+                    </div>
+                  </div>
+            </div>
+            
+            <div class="col-lg-6">
+              <div class="card shadow">
+                  <div class="card-header">
+                    <h4 style="color:rgb(152, 0, 86);">Angular</h4>
+                    <small class="text-muted">
+                      <h6>OOO</h6>
+                    </small>
+                  </div>
+                  <div class="card-body py-0">
+                      
+                      <pre class="m-0">
+                          <code style="border-radius: 0.375rem;">
+OOO
+                          </code>
+                        </pre>
+
+                  </div>
+                </div>
+          </div>
+        
+        </div>
+        <!-- ROW End -->
 
 
 

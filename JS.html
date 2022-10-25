@@ -412,6 +412,71 @@ zh-TW: 2021/9/3 下午5:56:58
                   <div class="card-header">
                     <h4 style="color:rgb(214 217 9);">JS</h4>
                     <small class="text-muted">
+                      <h6>Dates Calculation</h6>
+                    </small>
+                  </div>
+                  <div class="card-body py-0">
+                      
+                      <pre class="m-0">
+                          <code style="border-radius: 0.375rem;">
+var dabar_Tik_Data =
+date.getUTCFullYear() + "-" +
+  ("0" + (date.getUTCMonth()+1)).slice(-2) + "-" +
+  ("0" + date.getUTCDate()).slice(-2);
+}
+                          </code>
+                        </pre>
+
+                  </div>
+                </div>
+            </div>
+          
+          </div>
+          <!-- ROW End -->
+
+
+
+
+
+
+
+
+          <!-- ROW Start -->
+          <div class="row pt-3">
+
+            <div class="col-lg-6">
+                <div class="card shadow">
+                    <div class="card-header">
+                      <h4 style="color:rgb(214 217 9);">JS</h4>
+                      <small class="text-muted">
+                        <h6>Date Month Calculation</h6>
+                      </small>
+                    </div>
+                    <div class="card-body py-0">
+                        
+                      <pre class="m-0">
+                        <code style="border-radius: 0.375rem;">
+// MONTH -1
+var monthStart_1 = new Date(date.getFullYear(), date.getMonth(), 1).toLocaleDateString('en-CA');
+var monthEnd_1 = new Date(date.getFullYear(), date.getMonth() + 1, 0).toLocaleDateString('en-CA');
+var month_1 = monthStart_1.substring(0,7).replace('-', '');
+
+// MONTH -10
+var monthStart_10 = new Date(date.getFullYear(), date.getMonth() -9 , 1).toLocaleDateString('en-CA');
+var monthEnd_10 = new Date(date.getFullYear(), date.getMonth() -8, 0).toLocaleDateString('en-CA');
+var month_10 = monthStart_10.substring(0,7).replace('-', '');
+                        </code>
+                      </pre>
+
+                    </div>
+                  </div>
+            </div>
+            
+            <div class="col-lg-6">
+              <div class="card shadow">
+                  <div class="card-header">
+                    <h4 style="color:rgb(214 217 9);">JS</h4>
+                    <small class="text-muted">
                       <h6>OOO</h6>
                     </small>
                   </div>
@@ -429,6 +494,10 @@ OOO
           
           </div>
           <!-- ROW End -->
+
+
+
+
 
 
 
