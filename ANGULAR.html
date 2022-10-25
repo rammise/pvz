@@ -463,31 +463,27 @@ $scope.sortConsProducts = {
                           <code style="border-radius: 0.375rem;">
 &lt;table id=&quot;exportTableFirst&quot; class=&quot;table table-light table-striped&quot; style=&quot;width:100%;font-size: 12px;&quot;&gt;
   &lt;thead&gt;
-          &lt;tr&gt;
+    &lt;tr&gt;
               
+        &lt;th style=&quot;min-width: 100px;border-bottom: none;border-top: none;z-index: 2;&quot; class=&quot;sticky-col sticky-col-2&quot;&gt;&lt;/th&gt;
+        &lt;th style=&quot;width: 100%;border-bottom: none;border-top: none;z-index: 2;&quot; class=&quot;sticky-col sticky-col-2&quot;&gt;
+            &lt;span class=&quot;wrap&quot; style=&quot;font-size: 12px;&quot;&gt;
+                &lt;span&gt;Code&lt;/span&gt;
+                &lt;span style=&quot;float:right;&quot;&gt;
+                    &lt;i ng-click=&quot;changeSortingConsProducts('Code')&quot; class=&quot;mano-sorting-icons fa fa-sort&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+                &lt;/span&gt;
+            &lt;/span&gt;
+            &lt;span style=&quot;background-color: #d8faff;border-top: none;border-bottom: none;z-index: 2;&quot; class=&quot;sticky-col second-col&quot;&gt;
+                &lt;span class=&quot;wrap&quot;&gt;
+                    &lt;input type=&quot;text&quot; id=&quot;search_Code&quot; class=&quot;form-control&quot; ng-model=&quot;search_Code&quot; style=&quot;font-size: 12px;&quot;&gt;
+                &lt;/span&gt;
+            &lt;/span&gt;
+        &lt;/th&gt;
+        
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
           
-              &lt;th style=&quot;min-width: 100px;border-bottom: none;border-top: none;z-index: 2;&quot; class=&quot;sticky-col sticky-col-2&quot;&gt;&lt;/th&gt;
-              &lt;th style=&quot;width: 100%;border-bottom: none;border-top: none;z-index: 2;&quot; class=&quot;sticky-col sticky-col-2&quot;&gt;
-                  &lt;span class=&quot;wrap&quot; style=&quot;font-size: 12px;&quot;&gt;
-                      &lt;span&gt;Code&lt;/span&gt;
-                      &lt;span style=&quot;float:right;&quot;&gt;
-                          &lt;i ng-click=&quot;changeSortingConsProducts('Code')&quot; class=&quot;mano-sorting-icons fa fa-sort&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
-                      &lt;/span&gt;
-                  &lt;/span&gt;
-                  &lt;span style=&quot;background-color: #d8faff;border-top: none;border-bottom: none;z-index: 2;&quot; class=&quot;sticky-col second-col&quot;&gt;
-                      &lt;span class=&quot;wrap&quot;&gt;
-                          &lt;input type=&quot;text&quot; id=&quot;search_Code&quot; class=&quot;form-control&quot; ng-model=&quot;search_Code&quot; style=&quot;font-size: 12px;&quot;&gt;
-                      &lt;/span&gt;
-                  &lt;/span&gt;
-              &lt;/th&gt;
-              
-              
-
-          &lt;/tr&gt;
-          &lt;/thead&gt;
-          &lt;tbody&gt;
-          
-
       &lt;tr 
       pagination-id=&quot;recordsPagination&quot; 
       dir-paginate=&quot;product in pricelist_Stock | orderBy:sortConsProducts.column:sortConsProducts.descending | 
@@ -500,32 +496,28 @@ $scope.sortConsProducts = {
           &lt;td class=&quot;sticky-col sticky-col-2&quot;&gt;{{product.Code}}&lt;/td&gt;
       &lt;/tr&gt;
 
-
   &lt;/tbody&gt;
 
-  &lt;/table&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;pt-2&quot;&gt;
-  &lt;div class=&quot;btn-group&quot;&gt;
+&lt;/table&gt;
 
-  &lt;div class=&quot;form-group&quot;&gt;
-      &lt;select class=&quot;form-control&quot; ng-model=&quot;pageSizeRecords&quot; name=&quot;pageSizeRecords&quot; id=&quot;pageSizeRecords&quot;&gt;
-          &lt;option ng-value=&quot;25&quot;&gt;25&lt;/option&gt;
-          &lt;option ng-value=&quot;100&quot;&gt;100&lt;/option&gt;
-          &lt;option ng-value=&quot;250&quot;&gt;250&lt;/option&gt;
-          &lt;option ng-value=&quot;1000&quot;&gt;500&lt;/option&gt;
-          &lt;!-- &lt;option value=&quot;&quot;&gt;ALL&lt;/option&gt; --&gt;
-      &lt;/select&gt;
-  &lt;/div&gt;    
-  &lt;div class=&quot;form-group&quot;&gt;
+&lt;div class=&quot;pt-2&quot;&gt;
+  &lt;div class=&quot;btn-group&quot;&gt;
+    &lt;div class=&quot;form-group&quot;&gt;
+        &lt;select class=&quot;form-control&quot; ng-model=&quot;pageSizeRecords&quot; name=&quot;pageSizeRecords&quot; id=&quot;pageSizeRecords&quot;&gt;
+            &lt;option ng-value=&quot;25&quot;&gt;25&lt;/option&gt;
+            &lt;option ng-value=&quot;100&quot;&gt;100&lt;/option&gt;
+            &lt;option ng-value=&quot;250&quot;&gt;250&lt;/option&gt;
+            &lt;option ng-value=&quot;1000&quot;&gt;500&lt;/option&gt;
+            &lt;!-- &lt;option value=&quot;&quot;&gt;ALL&lt;/option&gt; --&gt;
+        &lt;/select&gt;
+    &lt;/div&gt;    
+    &lt;div class=&quot;form-group&quot;&gt;
       &lt;input type=&quot;number&quot; class=&quot;form-control text-center&quot; placeholder=&quot;{{pricelist_Stock.length}}&quot; disabled style=&quot;max-width: 120px;&quot;&gt;
-  &lt;/div&gt;         
+    &lt;/div&gt;         
   &lt;/div&gt;
   &lt;div class=&quot;float-end&quot;&gt;
-  &lt;dir-pagination-controls pagination-id=&quot;recordsPagination&quot; boundary-links=&quot;true&quot; template-url=&quot;fx/dirPagination.tpl.html&quot;&gt;&lt;/dir-pagination-controls&gt;
+    &lt;dir-pagination-controls pagination-id=&quot;recordsPagination&quot; boundary-links=&quot;true&quot; template-url=&quot;fx/dirPagination.tpl.html&quot;&gt;&lt;/dir-pagination-controls&gt;
   &lt;/div&gt;
-
-
 &lt;/div&gt;
                           </code>
                         </pre>
@@ -556,29 +548,29 @@ $scope.sortConsProducts = {
                         <pre class="m-0">
                             <code style="border-radius: 0.375rem;">
 &lt;ul class=&quot;pagination&quot; ng-if=&quot;1 &lt; pages.length&quot;&gt;
-&lt;li class=&quot;page-item&quot; ng-if=&quot;boundaryLinks&quot; ng-class=&quot;{ disabled : pagination.current == 1 }&quot;&gt;
-  &lt;a class=&quot;page-link&quot; href=&quot;#&quot; aria-label=&quot;Previous&quot; ng-click=&quot;setCurrent(1)&quot;&gt;
-    &lt;span aria-hidden=&quot;true&quot;&gt;&amp;laquo;&lt;/span&gt;
-  &lt;/a&gt;
-&lt;/li&gt;
-&lt;li class=&quot;page-item&quot; ng-if=&quot;directionLinks&quot; ng-class=&quot;{ disabled : pagination.current == 1 }&quot;&gt;
-    &lt;a class=&quot;page-link&quot; href=&quot;#&quot; aria-label=&quot;Previous&quot; ng-click=&quot;setCurrent(pagination.current - 1)&quot;&gt;
-      &lt;span aria-hidden=&quot;true&quot;&gt;&lsaquo;&lt;/span&gt;
+  &lt;li class=&quot;page-item&quot; ng-if=&quot;boundaryLinks&quot; ng-class=&quot;{ disabled : pagination.current == 1 }&quot;&gt;
+    &lt;a class=&quot;page-link&quot; href=&quot;#&quot; aria-label=&quot;Previous&quot; ng-click=&quot;setCurrent(1)&quot;&gt;
+      &lt;span aria-hidden=&quot;true&quot;&gt;&amp;laquo;&lt;/span&gt;
     &lt;/a&gt;
   &lt;/li&gt;
-&lt;li class=&quot;page-item&quot; ng-repeat=&quot;pageNumber in pages track by $index&quot; ng-class=&quot;{ active : pagination.current == pageNumber, disabled : pageNumber == '...' }&quot;&gt;
-    &lt;a class=&quot;page-link&quot; href=&quot;#&quot; ng-click=&quot;setCurrent(pageNumber)&quot;&gt;{{ pageNumber }}&lt;/a&gt;
-&lt;/li&gt;
-&lt;li class=&quot;page-item&quot; ng-if=&quot;directionLinks&quot; ng-class=&quot;{ disabled : pagination.current == pagination.last }&quot;&gt;
-    &lt;a class=&quot;page-link&quot; href=&quot;#&quot; aria-label=&quot;Next&quot; ng-click=&quot;setCurrent(pagination.current + 1)&quot;&gt;
-      &lt;span aria-hidden=&quot;true&quot;&gt;&rsaquo;&lt;/span&gt;
+  &lt;li class=&quot;page-item&quot; ng-if=&quot;directionLinks&quot; ng-class=&quot;{ disabled : pagination.current == 1 }&quot;&gt;
+      &lt;a class=&quot;page-link&quot; href=&quot;#&quot; aria-label=&quot;Previous&quot; ng-click=&quot;setCurrent(pagination.current - 1)&quot;&gt;
+        &lt;span aria-hidden=&quot;true&quot;&gt;&lsaquo;&lt;/span&gt;
+      &lt;/a&gt;
+    &lt;/li&gt;
+  &lt;li class=&quot;page-item&quot; ng-repeat=&quot;pageNumber in pages track by $index&quot; ng-class=&quot;{ active : pagination.current == pageNumber, disabled : pageNumber == '...' }&quot;&gt;
+      &lt;a class=&quot;page-link&quot; href=&quot;#&quot; ng-click=&quot;setCurrent(pageNumber)&quot;&gt;{{ pageNumber }}&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li class=&quot;page-item&quot; ng-if=&quot;directionLinks&quot; ng-class=&quot;{ disabled : pagination.current == pagination.last }&quot;&gt;
+      &lt;a class=&quot;page-link&quot; href=&quot;#&quot; aria-label=&quot;Next&quot; ng-click=&quot;setCurrent(pagination.current + 1)&quot;&gt;
+        &lt;span aria-hidden=&quot;true&quot;&gt;&rsaquo;&lt;/span&gt;
+      &lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li class=&quot;page-item&quot; ng-if=&quot;boundaryLinks&quot;  ng-class=&quot;{ disabled : pagination.current == pagination.last }&quot;&gt;
+    &lt;a class=&quot;page-link&quot; href=&quot;#&quot; aria-label=&quot;Next&quot; ng-click=&quot;setCurrent(pagination.last)&quot;&gt;
+      &lt;span aria-hidden=&quot;true&quot;&gt;&amp;raquo;&lt;/span&gt;
     &lt;/a&gt;
-&lt;/li&gt;
-&lt;li class=&quot;page-item&quot; ng-if=&quot;boundaryLinks&quot;  ng-class=&quot;{ disabled : pagination.current == pagination.last }&quot;&gt;
-  &lt;a class=&quot;page-link&quot; href=&quot;#&quot; aria-label=&quot;Next&quot; ng-click=&quot;setCurrent(pagination.last)&quot;&gt;
-    &lt;span aria-hidden=&quot;true&quot;&gt;&amp;raquo;&lt;/span&gt;
-  &lt;/a&gt;
-&lt;/li&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
                             </code>
                           </pre>
